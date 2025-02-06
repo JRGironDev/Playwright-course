@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            text-align: center;
+            padding: 0;
+        }
+        .button-style {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .counter-style {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="clickButton" class="button-style" data-action="increment" role="button">CLICK ME</button>
+    <div id="counter" class="counter-style" data-counter="number">0</div>
+    <script>
+        let count = 0;
+        const button = document.getElementById('clickButton');
+        const counter = document.getElementById('counter');
+
+        button.onclick = function() {
+            count++;
+            counter.innerHTML = count;
+        }
+    </script>
+</body>
+</html>
