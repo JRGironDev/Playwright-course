@@ -21,5 +21,10 @@ test.only("Learning selectors", async ({ page }) => {
   // 7. Select by Css
   await page.locator('div[data-counter="number"]').click();
 
+  // 8. Select by Text
+  await page.locator('text=Click me').click();
+
   await page.pause();
+
+
 });
